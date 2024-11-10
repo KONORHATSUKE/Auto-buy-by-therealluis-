@@ -1,0 +1,46 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({
+    Name = "Real’s Simple Scripts",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "AutoBuyerPro"
+})
+
+local Tab = Window:MakeTab({
+    Name = "Scripts",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+    Name = "Opciones de Scripts"
+})
+
+Section:AddButton({
+    Name = "AutoBuyerDelta",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rdx222f/SniperFree/refs/heads/main/Ugc-Globin.lua"))()
+    end
+})
+
+Section:AddButton({
+    Name = "Autoclicker",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Autoclicker-21136"))()
+    end
+})
+
+Section:AddButton({
+    Name = "Copy Position",
+    Callback = function()
+        loadstring(game:HttpGet("https://bit.ly/4hIJqko", true))()
+    end
+})
+
+Section:AddButton({
+    Name = "AutoBuy (Fluxus-AppleWare Only)",
+    Callback = function()
+        getgenv().webhook = ""  -- Configura tu webhook aquí
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/rdx222f/Universal/main/AutoBuy.lua"))()
+    end
+})
